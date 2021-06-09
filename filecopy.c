@@ -20,6 +20,7 @@ void *filecopy(const char *filename){
 	char ch;
 	file = fopen(filename, "r");
 	char filecopyname[15] = "";
+	//copy filename
 	strcpy(filecopyname, filename);
 	strcat(filecopyname, "copy_");
 	filecopy = fopen(filecopyname, "w");
@@ -41,7 +42,6 @@ int main() {
 	pthread_create(&thread, NULL, &filecopy, filename);
 
 	pthread_join(thread, NULL);
-	//filecopy(filename);
 	return 0;
 }
 
