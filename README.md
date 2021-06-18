@@ -15,5 +15,12 @@ With a thread runing copy content of file to another
 
 - Run:     $ ./filecopy
 
+********Autotools******************
+libtoolize --force
+aclocal
+autoheader
+automake --force-missing --add-missing
+autoconf
+./configure
 
 
